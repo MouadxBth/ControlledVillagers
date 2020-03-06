@@ -10,16 +10,22 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Villagers extends JavaPlugin {
 
+  private CustomVillagerSpawner spawner;
+
   @Override
   public void onEnable() {
     handleConfig();
     loadCommands();
     loadListeners();
+
+    getLogger().info("Enabled Controlled Villagers!");
   }
 
   @Override
   public void onDisable() {
     HandlerList.unregisterAll(this);
+    spawner.clear();
+    getLogger().info("Disabled Controlled Villagers!");
   }
 
   private void handleConfig() {
@@ -34,6 +40,6 @@ public final class Villagers extends JavaPlugin {
   private void loadListeners() {
     new EntityAttack(this);
     new EntityDeath(this);
-    new CustomVillagerSpawner(this);
+    spawner = new CustomVillagerSpawner(this);
   }
 }

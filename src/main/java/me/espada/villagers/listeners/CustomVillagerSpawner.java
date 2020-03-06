@@ -87,4 +87,8 @@ public class CustomVillagerSpawner implements Listener {
       map.remove(uuid);
     }
   }
+
+  public void clear() {
+    if(map != null) map.values().forEach(runnable -> runnable.setCancelled(true));
+  }
 }
