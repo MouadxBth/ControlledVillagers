@@ -1,0 +1,19 @@
+name: Villagers
+version: ${project.version}
+main: me.espada.villagers.Villagers
+api-version: 1.15
+authors: [Espada]
+description: A plugin that lets you controle the villagers based on mobs
+website: www.isnanemc.net
+commands:
+
+  mutate:
+    usage: use this command to mutate a villager to a custom villager
+    description: used to mutate a villager to a custom villager
+    permission: villagers.mutate
+
+  spawn:
+    usage: use this command to spawn a custom villager
+    description: used to spawn a custom villager
+    aliases: villager
+    permission: villagers.spawn
