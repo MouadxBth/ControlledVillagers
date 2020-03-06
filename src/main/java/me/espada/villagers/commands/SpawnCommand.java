@@ -8,12 +8,19 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Villager;
+import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static me.espada.villagers.base.Utils.format;
 
 public class SpawnCommand implements CommandExecutor {
+
+  public SpawnCommand(JavaPlugin plugin) {
+    Optional.ofNullable(plugin.getCommand("villagerspawn"))
+        .ifPresent(command -> command.setExecutor(this));
+  }
 
   @Override
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -22,9 +29,12 @@ public class SpawnCommand implements CommandExecutor {
       return false;
     }
 
-    if (args.length != 1) return false;
-
     Player player = (Player) sender;
+
+    if (args.length != 1) {
+      player.sendMessage(format("&cUsage: /villagerspawn [Mob]"));
+      return false;
+    }
 
     Stream.of(EntityType.values())
         .forEach(

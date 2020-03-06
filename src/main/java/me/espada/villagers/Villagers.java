@@ -8,12 +8,11 @@ import me.espada.villagers.listeners.EntityDeath;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Optional;
-
 public final class Villagers extends JavaPlugin {
 
   @Override
   public void onEnable() {
+    handleConfig();
     loadCommands();
     loadListeners();
   }
@@ -23,11 +22,13 @@ public final class Villagers extends JavaPlugin {
     HandlerList.unregisterAll(this);
   }
 
+  private void handleConfig() {
+    this.saveDefaultConfig();
+  }
+
   private void loadCommands() {
-    Optional.ofNullable(getCommand("spawn"))
-        .ifPresent(command -> command.setExecutor(new SpawnCommand()));
-    Optional.ofNullable(getCommand("mutate"))
-        .ifPresent(command -> command.setExecutor(new MutateCommand()));
+    new SpawnCommand(this);
+    new MutateCommand(this);
   }
 
   private void loadListeners() {

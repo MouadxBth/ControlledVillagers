@@ -8,7 +8,9 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Villager;
+import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static me.espada.villagers.base.Utils.format;
@@ -16,15 +18,24 @@ import static me.espada.villagers.base.Utils.isLookingAt;
 
 public class MutateCommand implements CommandExecutor {
 
+  public MutateCommand(JavaPlugin plugin) {
+    Optional.ofNullable(plugin.getCommand("villagermutate"))
+        .ifPresent(command -> command.setExecutor(this));
+  }
+
   @Override
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
     if (!(sender instanceof Player)) {
       System.out.println("You can not execute this command, only plaeyrs can!");
       return false;
     }
-    if (args.length != 1) return false;
 
     Player player = (Player) sender;
+
+    if (args.length != 1) {
+      player.sendMessage(format("&cUsage: /villagermutate [Mob]"));
+      return false;
+    }
 
     Stream.of(EntityType.values())
         .forEach(

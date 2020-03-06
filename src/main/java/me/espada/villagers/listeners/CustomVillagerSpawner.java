@@ -27,8 +27,8 @@ public class CustomVillagerSpawner implements Listener {
     this.finder =
         new StructureFinder.Builder(plugin)
             .setCollection(new HashSet<>())
-            .setDelay(3)
-            .setPeriod(20)
+            .setDelay(plugin.getConfig().getInt("delay"))
+            .setPeriod(plugin.getConfig().getInt("period"))
             .setStructure("Village");
     this.map = new HashMap<>();
     plugin.getServer().getPluginManager().registerEvents(this, plugin);
