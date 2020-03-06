@@ -22,7 +22,7 @@ public class SpawnCommand implements CommandExecutor {
       return false;
     }
 
-    if (args.length > 1) return false;
+    if (args.length != 1) return false;
 
     Player player = (Player) sender;
 
@@ -31,14 +31,13 @@ public class SpawnCommand implements CommandExecutor {
             entityType -> {
               if (!entityType.isAlive()) return;
 
-              if (entityType.getKey().getKey().equalsIgnoreCase(args[0])) {
-
-                CustomMobSpawner.spawnAt(player.getLocation(), IronGolem.class, Villager.class);
-                player.sendMessage(format("&aSuccessfuly spawned!"));
-
-              } else {
+              if (!entityType.getKey().getKey().equalsIgnoreCase(args[0])) {
                 player.sendMessage(format("&cCouldnt find a Living entity with that name!"));
+                return;
               }
+
+              CustomMobSpawner.spawnAt(player.getLocation(), IronGolem.class, Villager.class);
+              player.sendMessage(format("&aSuccessfuly spawned!"));
             });
 
     return true;

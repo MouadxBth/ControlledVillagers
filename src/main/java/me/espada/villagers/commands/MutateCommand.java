@@ -22,7 +22,7 @@ public class MutateCommand implements CommandExecutor {
       System.out.println("You can not execute this command, only plaeyrs can!");
       return false;
     }
-    if (args.length > 1) return false;
+    if (args.length != 1) return false;
 
     Player player = (Player) sender;
 
@@ -31,32 +31,32 @@ public class MutateCommand implements CommandExecutor {
             entityType -> {
               if (!entityType.isAlive()) return;
 
-              if (entityType.getKey().getKey().equalsIgnoreCase(args[0])) {
-
-                player
-                    .getNearbyEntities(10, 10, 10)
-                    .forEach(
-                        entity -> {
-                          if (entity instanceof LivingEntity) {
-
-                            if (!isLookingAt(player, (LivingEntity) entity)) {
-                              player.sendMessage(format("&cYou are not looking at a villager!"));
-                              return;
-                            }
-
-                            if (!(entity instanceof Villager)) {
-                              player.sendMessage(format("&cYou are not looking at a villager!"));
-                              return;
-                            }
-
-                            CustomMobSpawner.mutate(
-                                player.getLocation(), entityType.getEntityClass(), entity);
-                            player.sendMessage(format("&aSuccessfuly mutated!"));
-                          }
-                        });
-              } else {
+              if (!entityType.getKey().getKey().equalsIgnoreCase(args[0])) {
                 player.sendMessage(format("&cCouldnt find a Living entity with that name!"));
+                return;
               }
+
+              player
+                  .getNearbyEntities(10, 10, 10)
+                  .forEach(
+                      entity -> {
+                        if (entity instanceof LivingEntity) {
+
+                          if (!isLookingAt(player, (LivingEntity) entity)) {
+                            player.sendMessage(format("&cYou are not looking at a villager!"));
+                            return;
+                          }
+
+                          if (!(entity instanceof Villager)) {
+                            player.sendMessage(format("&cYou are not looking at a villager!"));
+                            return;
+                          }
+
+                          CustomMobSpawner.mutate(
+                              player.getLocation(), entityType.getEntityClass(), entity);
+                          player.sendMessage(format("&aSuccessfuly mutated!"));
+                        }
+                      });
             });
 
     return true;
