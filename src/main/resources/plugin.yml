@@ -10,7 +10,7 @@ commands:
   villageredit:
     usage: use this command to edit the delay and the period values
     description: used this command to edit the delay and the period values
-    aliases: vr
+    aliases: ve
     permission: villagers.edit
 
   villagermutate:
