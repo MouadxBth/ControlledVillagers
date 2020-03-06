@@ -7,13 +7,20 @@ description: A plugin that lets you controle the villagers based on mobs
 website: www.isnanemc.net
 commands:
 
-  mutate:
+  villageredit:
+    usage: use this command to edit the delay and the period values
+    description: used this command to edit the delay and the period values
+    aliases: vr
+    permission: villagers.edit
+
+  villagermutate:
     usage: use this command to mutate a villager to a custom villager
     description: used to mutate a villager to a custom villager
+    aliases: vm
     permission: villagers.mutate
 
-  spawn:
+  villagerspawn:
     usage: use this command to spawn a custom villager
     description: used to spawn a custom villager
-    aliases: villager
+    aliases: vs
     permission: villagers.spawn
