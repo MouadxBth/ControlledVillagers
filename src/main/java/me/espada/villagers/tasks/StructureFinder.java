@@ -8,7 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
-import static me.espada.villagers.base.Utils.*;
+import static me.espada.villagers.base.Utilities.*;
 
 public interface StructureFinder extends Cancellable {
 

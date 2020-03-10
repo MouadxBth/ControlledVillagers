@@ -4,6 +4,7 @@ me\espada\villagers\commands\SpawnCommand.class
 me\espada\villagers\listeners\EntityDismount.class
 me\espada\villagers\listeners\CustomVillagerSpawner.class
 me\espada\villagers\Villagers.class
+me\espada\villagers\base\Utilities.class
 me\espada\villagers\commands\EditCommand.class
 me\espada\villagers\tasks\StructureFinder$Builder$1.class
 me\espada\villagers\commands\MutateCommand.class
@@ -11,4 +12,3 @@ me\espada\villagers\base\CustomMobSpawner.class
 me\espada\villagers\listeners\EntityAttack.class
 me\espada\villagers\listeners\EntityDeath.class
 me\espada\villagers\tasks\StructureFinder$Builder$1$1.class
-me\espada\villagers\base\Utils.class

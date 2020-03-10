@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.UUID;
 
-import static me.espada.villagers.base.Utils.*;
+import static me.espada.villagers.base.Utilities.*;
 
 public class CustomVillagerSpawner implements Listener {
 

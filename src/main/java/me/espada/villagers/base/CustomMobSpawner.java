@@ -20,7 +20,7 @@ public interface CustomMobSpawner {
 
     if (riding instanceof LivingEntity) {
       LivingEntity livingEntity = (LivingEntity) riding;
-      //   invisibility.apply(livingEntity);
+      invisibility.apply(livingEntity);
       livingEntity.setCollidable(false);
     }
 
@@ -40,7 +40,7 @@ public interface CustomMobSpawner {
 
     if (riding instanceof LivingEntity) {
       LivingEntity livingEntity = (LivingEntity) riding;
-      //  invisibility.apply(livingEntity);
+      invisibility.apply(livingEntity);
       livingEntity.setCollidable(false);
     }
 

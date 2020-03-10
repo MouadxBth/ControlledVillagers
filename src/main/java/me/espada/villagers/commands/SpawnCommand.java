@@ -12,7 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static me.espada.villagers.base.Utils.format;
+import static me.espada.villagers.base.Utilities.format;
 
 public class SpawnCommand implements CommandExecutor {
 
