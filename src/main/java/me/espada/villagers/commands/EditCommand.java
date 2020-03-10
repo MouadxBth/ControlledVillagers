@@ -40,7 +40,7 @@ public class EditCommand implements CommandExecutor {
         try {
           period = Integer.parseInt(args[1]);
         } catch (Exception e) {
-          player.sendMessage(format("&c" + args[1] + " is not a integer!"));
+          player.sendMessage(format("&c" + args[1] + " is not an integer!"));
           return false;
         }
 
@@ -54,13 +54,27 @@ public class EditCommand implements CommandExecutor {
         try {
           delay = Integer.parseInt(args[1]);
         } catch (Exception e) {
-          player.sendMessage(format("&c" + args[1] + " is not a integer!"));
+          player.sendMessage(format("&c" + args[1] + " is not an integer!"));
           return false;
         }
 
         plugin.getConfig().set("delay", delay);
         plugin.saveConfig();
         player.sendMessage("&cSuccessfuly modified the delay to &6" + delay + " &aseconds");
+        player.sendMessage("&aPlease reload the plugin for the new changes to be applied!");
+        break;
+      case "chance":
+        double chance;
+        try {
+          chance = Double.parseDouble(args[1]);
+        } catch (Exception e) {
+          player.sendMessage(format("&c" + args[1] + " is not a double!"));
+          return false;
+        }
+
+        plugin.getConfig().set("chance", chance);
+        plugin.saveConfig();
+        player.sendMessage("&cSuccessfuly modified the chance to &6" + chance + " &a%");
         player.sendMessage("&aPlease reload the plugin for the new changes to be applied!");
         break;
     }

@@ -31,7 +31,9 @@ public class EntityAttack implements Listener {
           .getPassengers()
           .forEach(
               passenger -> {
-                if (passenger instanceof Mob) {
+                if (passenger instanceof Mob
+                    && passenger.getCustomName() != null
+                    && passenger.getCustomName().contains("number")) {
                   ((Mob) passenger).setTarget((LivingEntity) projectile.getShooter());
                 }
               });
@@ -41,7 +43,9 @@ public class EntityAttack implements Listener {
           .getPassengers()
           .forEach(
               passenger -> {
-                if (passenger instanceof Mob) {
+                  if (passenger instanceof Mob
+                          && passenger.getCustomName() != null
+                          && passenger.getCustomName().contains("number")) {
                   ((Mob) passenger).setTarget((LivingEntity) damager);
                 }
               });

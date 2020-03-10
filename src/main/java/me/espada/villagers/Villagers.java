@@ -5,6 +5,7 @@ import me.espada.villagers.commands.SpawnCommand;
 import me.espada.villagers.listeners.CustomVillagerSpawner;
 import me.espada.villagers.listeners.EntityAttack;
 import me.espada.villagers.listeners.EntityDeath;
+import me.espada.villagers.listeners.EntityDismount;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -40,6 +41,7 @@ public final class Villagers extends JavaPlugin {
   private void loadListeners() {
     new EntityAttack(this);
     new EntityDeath(this);
+    new EntityDismount(this);
     spawner = new CustomVillagerSpawner(this);
   }
 }

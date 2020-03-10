@@ -12,7 +12,10 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.UUID;
 
 import static me.espada.villagers.base.Utils.*;
 
@@ -30,7 +33,9 @@ public class CustomVillagerSpawner implements Listener {
             .setDelay(plugin.getConfig().getInt("delay"))
             .setPeriod(plugin.getConfig().getInt("period"))
             .setStructure("Village");
+
     this.map = new HashMap<>();
+
     plugin.getServer().getPluginManager().registerEvents(this, plugin);
   }
 
@@ -40,6 +45,7 @@ public class CustomVillagerSpawner implements Listener {
     final UUID uuid = player.getUniqueId();
 
     final StructureFinder structureFinder = finder.setFrom(player.getLocation()).build();
+
     structureFinder.track(
         () ->
             player
@@ -50,12 +56,11 @@ public class CustomVillagerSpawner implements Listener {
 
                       try {
                         if (inArea(
-                            getLocationFromString(getStructure(player.getLocation(), "Village")),
+                            getStructureLocationFrom(player.getWorld(), getStructure(player.getLocation(), "Village")),
                             entity.getLocation(),
                             50)) {
-                          Random random = new Random();
 
-                          if (random.nextInt(100) >= 50) {
+                          if (Math.random() >= 0.01 * plugin.getConfig().getDouble("chance")) {
                             CustomMobSpawner.spawnAt(
                                 entity.getLocation(), IronGolem.class, Villager.class);
                           }
@@ -89,6 +94,6 @@ public class CustomVillagerSpawner implements Listener {
   }
 
   public void clear() {
-    if(map != null) map.values().forEach(runnable -> runnable.setCancelled(true));
+    if (map != null) map.values().forEach(runnable -> runnable.setCancelled(true));
   }
 }

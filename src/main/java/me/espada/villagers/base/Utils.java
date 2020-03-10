@@ -4,8 +4,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
-import org.bukkit.util.Vector;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -13,33 +13,25 @@ import java.util.Objects;
 
 public interface Utils {
 
-  static boolean isLookingAt(LivingEntity one, LivingEntity two) {
-    Location eye = one.getEyeLocation();
-    Vector toEntity = two.getEyeLocation().toVector().subtract(eye.toVector());
-    double dot = toEntity.normalize().dot(eye.getDirection());
-
-    return dot > 0.99D;
+  static boolean isLookingAt(LivingEntity one, Entity two) {
+    return one.getEyeLocation().equals(two.getLocation());
   }
 
   static String format(String message) {
     return ChatColor.translateAlternateColorCodes('&', message);
   }
 
-  static Location getLocationFromString(String s) {
-    if (s == null || s.trim().equals("")) {
+
+  static Location getStructureLocationFrom(World world, String location) {
+    if (location == null || world == null || location.trim().equals("")) {
       return null;
     }
-    final String[] parts = s.split(":");
-    if (parts.length == 6) {
-      World w = Bukkit.getServer().getWorld(parts[0]);
-      double x = Double.parseDouble(parts[1]);
-      double y = Double.parseDouble(parts[2]);
-      double z = Double.parseDouble(parts[3]);
-      float yaw = Float.parseFloat(parts[4]);
-      float pitch = Float.parseFloat(parts[5]);
-      return new Location(w, x, y, z, yaw, pitch);
-    }
-    return null;
+
+    final String[] split = location.split("[,{}=]");
+    double x = Double.parseDouble(split[2]);
+    double y = Double.parseDouble(split[4]);
+    double z = Double.parseDouble(split[6]);
+    return new Location(world, x, y, z);
   }
 
   static boolean inArea(Location targetLocation, Location location, int range) {
@@ -72,14 +64,13 @@ public interface Utils {
       throws NoSuchMethodException, SecurityException, IllegalAccessException,
           IllegalArgumentException, InvocationTargetException, ClassNotFoundException,
           InstantiationException {
-    Method getHandle = Objects.requireNonNull(location.getWorld()).getClass().getMethod("getHandle");
+    Method getHandle =
+        Objects.requireNonNull(location.getWorld()).getClass().getMethod("getHandle");
     Object nmsWorld = getHandle.invoke(location.getWorld());
     Object blockPositionString =
         nmsWorld
             .getClass()
-            .getMethod(
-                "a",
-                new Class[] {String.class, getNMSClass("BlockPosition"), int.class, boolean.class})
+            .getMethod("a", String.class, getNMSClass("BlockPosition"), int.class, boolean.class)
             .invoke(nmsWorld, structure, getBlockPosition(location), 100, false);
     return blockPositionString.toString();
   }

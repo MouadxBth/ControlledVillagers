@@ -7,7 +7,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Villager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Optional;
@@ -37,38 +36,41 @@ public class MutateCommand implements CommandExecutor {
       return false;
     }
 
-    Stream.of(EntityType.values())
-        .forEach(
-            entityType -> {
-              if (!entityType.isAlive()) return;
+    final Optional<EntityType> entityType =
+        Stream.of(EntityType.values())
+            .filter(entity -> entity.name().equalsIgnoreCase(args[0]))
+            .findAny();
 
-              if (!entityType.getKey().getKey().equalsIgnoreCase(args[0])) {
-                player.sendMessage(format("&cCouldnt find a Living entity with that name!"));
-                return;
-              }
+    if (!entityType.isPresent()) {
+      player.sendMessage(format("&cCouldnt find a Living entity with that name!"));
+      return false;
+    }
 
-              player
-                  .getNearbyEntities(10, 10, 10)
-                  .forEach(
-                      entity -> {
-                        if (entity instanceof LivingEntity) {
+    if (!entityType.get().isAlive()) {
+      player.sendMessage(format("&cThats not a living entity"));
+      return false;
+    } else {
+      player
+          .getNearbyEntities(20, player.getLocation().getY(), 20)
+          .forEach(
+              entity -> {
+                if (entity instanceof LivingEntity) {
 
-                          if (!isLookingAt(player, (LivingEntity) entity)) {
-                            player.sendMessage(format("&cYou are not looking at a villager!"));
-                            return;
-                          }
+                  if (!isLookingAt(player, (LivingEntity) entity)) {
+                    return;
+                  }
 
-                          if (!(entity instanceof Villager)) {
-                            player.sendMessage(format("&cYou are not looking at a villager!"));
-                            return;
-                          }
+                  if (!entity.getType().equals(EntityType.VILLAGER)) {
+                    player.sendMessage(format("&cYou are not looking at a villager!"));
+                    return;
+                  }
 
-                          CustomMobSpawner.mutate(
-                              player.getLocation(), entityType.getEntityClass(), entity);
-                          player.sendMessage(format("&aSuccessfuly mutated!"));
-                        }
-                      });
-            });
+                  CustomMobSpawner.mutate(
+                      player.getLocation(), entityType.get().getEntityClass(), entity);
+                  player.sendMessage(format("&aSuccessfuly mutated!"));
+                }
+              });
+    }
 
     return true;
   }

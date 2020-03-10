@@ -8,8 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
-import static me.espada.villagers.base.Utils.getLocationFromString;
-import static me.espada.villagers.base.Utils.getStructure;
+import static me.espada.villagers.base.Utils.*;
 
 public interface StructureFinder extends Cancellable {
 
@@ -87,7 +86,7 @@ public interface StructureFinder extends Cancellable {
                 return;
               }
               try {
-                getStructures().add(getLocationFromString(getStructure(from, structure)));
+                getStructures().add(getStructureLocationFrom(from.getWorld(), getStructure(from, structure)));
               } catch (NoSuchMethodException
                   | InstantiationException
                   | ClassNotFoundException

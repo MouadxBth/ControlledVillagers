@@ -1,6 +1,7 @@
 me\espada\villagers\tasks\StructureFinder$Builder.class
 me\espada\villagers\tasks\StructureFinder.class
 me\espada\villagers\commands\SpawnCommand.class
+me\espada\villagers\listeners\EntityDismount.class
 me\espada\villagers\listeners\CustomVillagerSpawner.class
 me\espada\villagers\Villagers.class
 me\espada\villagers\commands\EditCommand.class

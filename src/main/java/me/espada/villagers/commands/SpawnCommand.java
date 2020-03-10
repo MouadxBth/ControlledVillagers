@@ -5,7 +5,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Villager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,19 +35,23 @@ public class SpawnCommand implements CommandExecutor {
       return false;
     }
 
-    Stream.of(EntityType.values())
-        .forEach(
-            entityType -> {
-              if (!entityType.isAlive()) return;
+    final Optional<EntityType> entityType =
+        Stream.of(EntityType.values())
+            .filter(entity -> entity.name().equalsIgnoreCase(args[0]))
+            .findAny();
 
-              if (!entityType.getKey().getKey().equalsIgnoreCase(args[0])) {
-                player.sendMessage(format("&cCouldnt find a Living entity with that name!"));
-                return;
-              }
+    if (!entityType.isPresent()) {
+      player.sendMessage(format("&cCouldnt find a Living entity with that name!"));
+      return false;
+    }
 
-              CustomMobSpawner.spawnAt(player.getLocation(), IronGolem.class, Villager.class);
-              player.sendMessage(format("&aSuccessfuly spawned!"));
-            });
+    if (!entityType.get().isAlive()) {
+      player.sendMessage(format("&cThats not a living entity"));
+      return false;
+    } else {
+      CustomMobSpawner.spawnAt(player.getLocation(), entityType.get().getEntityClass(), Villager.class);
+      player.sendMessage(format("&aSuccessfuly spawned!"));
+    }
 
     return true;
   }
