@@ -26,7 +26,7 @@ public interface CustomMobSpawner {
 
     riding.setSilent(true);
     riding.setInvulnerable(true);
-    riding.setCustomName(passenger.getName() + " " + entity.getName());
+    riding.setCustomName(passenger.getSimpleName() + " " + entity.getSimpleName());
     riding.setCustomNameVisible(false);
 
     type.setPassenger(riding);

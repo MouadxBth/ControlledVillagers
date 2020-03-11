@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.vehicle.VehicleExitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffectType;
 
 public class EntityDismount implements Listener {
 
@@ -30,7 +31,7 @@ public class EntityDismount implements Listener {
                 livingPassenger ->
                     livingPassenger instanceof Mob
                         && livingPassenger.getCustomName() != null
-                        && livingPassenger.getCustomName().contains("number"));
+                        && livingPassenger.hasPotionEffect(PotionEffectType.INVISIBILITY));
 
     if (result) event.setCancelled(true);
 

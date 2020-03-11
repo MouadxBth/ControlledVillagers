@@ -7,6 +7,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static me.espada.villagers.base.Utilities.format;
 
@@ -30,8 +32,19 @@ public class EditCommand implements CommandExecutor {
     Player player = (Player) sender;
 
     if (args.length != 2) {
-      player.sendMessage(format("&cUsage: /villageredit [delay/period] [time in seconds]"));
-      return false;
+      if (args[0].equalsIgnoreCase("message")) {
+        String message =
+            Stream.of(args)
+                .filter(string -> !string.equalsIgnoreCase("message"))
+                .collect(Collectors.joining());
+
+        setAndSave("message", message);
+        reloadMessage("&aSuccessfuly modified the message to " + message, player);
+        return true;
+      } else {
+        player.sendMessage(format("&cUsage: /villageredit [delay/period] [time in seconds]"));
+        return false;
+      }
     }
 
     switch (args[0].toLowerCase()) {
@@ -44,10 +57,8 @@ public class EditCommand implements CommandExecutor {
           return false;
         }
 
-        plugin.getConfig().set("period", period);
-        plugin.saveConfig();
-        player.sendMessage("&cSuccessfuly modified the period to &6" + period + " &aseconds");
-        player.sendMessage("&aPlease reload the plugin for the new changes to be applied!");
+        setAndSave("period", period);
+        reloadMessage("&aSuccessfuly modified the period to &6" + period + " &aseconds", player);
         break;
       case "delay":
         int delay;
@@ -58,10 +69,8 @@ public class EditCommand implements CommandExecutor {
           return false;
         }
 
-        plugin.getConfig().set("delay", delay);
-        plugin.saveConfig();
-        player.sendMessage("&cSuccessfuly modified the delay to &6" + delay + " &aseconds");
-        player.sendMessage("&aPlease reload the plugin for the new changes to be applied!");
+        setAndSave("delay", delay);
+        reloadMessage("&aSuccessfuly modified the delay to &6" + delay + " &aseconds", player);
         break;
       case "chance":
         double chance;
@@ -72,13 +81,21 @@ public class EditCommand implements CommandExecutor {
           return false;
         }
 
-        plugin.getConfig().set("chance", chance);
-        plugin.saveConfig();
-        player.sendMessage("&cSuccessfuly modified the chance to &6" + chance + " &a%");
-        player.sendMessage("&aPlease reload the plugin for the new changes to be applied!");
+        setAndSave("chance", chance);
+        reloadMessage("&aSuccessfuly modified the chance to &6" + chance + " &a%", player);
         break;
     }
 
     return false;
+  }
+
+  private void reloadMessage(String message, Player player) {
+    player.sendMessage(format(message));
+    player.sendMessage(format("&aPlease reload the plugin for the new changes to be applied!"));
+  }
+
+  private void setAndSave(String key, Object value) {
+    plugin.getConfig().set(key, value);
+    plugin.saveConfig();
   }
 }

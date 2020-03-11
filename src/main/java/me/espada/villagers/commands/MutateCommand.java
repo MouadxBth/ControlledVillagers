@@ -51,12 +51,12 @@ public class MutateCommand implements CommandExecutor {
       return false;
     } else {
       player
-          .getNearbyEntities(20, player.getLocation().getY(), 20)
+          .getNearbyEntities(20, 20, 20)
           .forEach(
               entity -> {
                 if (entity instanceof LivingEntity) {
 
-                  if (!isLookingAt(player, (LivingEntity) entity)) {
+                  if (!isLookingAt(player, entity)) {
                     return;
                   }
 

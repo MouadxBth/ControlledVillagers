@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffectType;
 
 public class EntityAttack implements Listener {
 
@@ -33,7 +34,7 @@ public class EntityAttack implements Listener {
               passenger -> {
                 if (passenger instanceof Mob
                     && passenger.getCustomName() != null
-                    && passenger.getCustomName().contains("number")) {
+                    && ((Mob) passenger).hasPotionEffect(PotionEffectType.INVISIBILITY)) {
                   ((Mob) passenger).setTarget((LivingEntity) projectile.getShooter());
                 }
               });
@@ -43,9 +44,9 @@ public class EntityAttack implements Listener {
           .getPassengers()
           .forEach(
               passenger -> {
-                  if (passenger instanceof Mob
-                          && passenger.getCustomName() != null
-                          && passenger.getCustomName().contains("number")) {
+                if (passenger instanceof Mob
+                    && passenger.getCustomName() != null
+                    && ((Mob) passenger).hasPotionEffect(PotionEffectType.INVISIBILITY)) {
                   ((Mob) passenger).setTarget((LivingEntity) damager);
                 }
               });

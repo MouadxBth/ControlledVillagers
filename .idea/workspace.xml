@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87f59f90-1051-48de-8761-50f69e2d32cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDismount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/Villagers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/Villagers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/base/CustomMobSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/base/CustomMobSpawner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/base/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/base/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/EditCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/EditCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/MutateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/MutateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/SpawnCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/SpawnCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/CustomVillagerSpawner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/CustomVillagerSpawner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityAttack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDeath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDeath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/tasks/StructureFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/tasks/StructureFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Villagers-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Villagers-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Villagers-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Villagers-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/espada/villagers/Villagers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/espada/villagers/base/CustomMobSpawner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/espada/villagers/base/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/espada/villagers/commands/MutateCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/espada/villagers/commands/SpawnCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/espada/villagers/listeners/EntityDeath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-Villagers-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-Villagers-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDismount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDismount.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,30 +28,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/CustomVillagerSpawner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+            <state relative-caret-position="1078">
+              <caret line="82" column="35" lean-forward="true" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3377#3378#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/base/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#444#445#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#672#673#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#3293#3294#0" expanded="true" />
+                <element signature="e#3381#3382#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,16 +45,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/tasks/StructureFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+            <state relative-caret-position="918">
+              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1494#1495#0" expanded="true" />
-                <element signature="e#1532#1533#0" expanded="true" />
-                <element signature="e#1602#1603#0" expanded="true" />
-                <element signature="e#1642#1643#0" expanded="true" />
-                <element signature="e#1715#1716#0" expanded="true" />
-                <element signature="e#1754#1755#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/base/CustomMobSpawner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+            <state relative-caret-position="497">
+              <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDeath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+            <state relative-caret-position="4">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,11 +87,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityAttack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/Villagers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="446">
+              <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDismount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+            <state relative-caret-position="527">
+              <caret line="33" column="88" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/EditCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+            <state relative-caret-position="1367">
+              <caret line="93" column="55" lean-forward="true" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,18 +173,18 @@
         <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/VillageFind.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/ModifyCommand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityAttack.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDismount.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/MutateCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/SpawnCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDeath.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/base/CustomMobSpawner.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/base/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/Villagers.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/tasks/StructureFinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/EditCommand.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/CustomVillagerSpawner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/Villagers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/EditCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/base/CustomMobSpawner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDeath.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDismount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityAttack.java" />
       </list>
     </option>
   </component>
@@ -255,8 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,15 +302,12 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Villagers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Villagers" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -464,7 +430,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583531752449</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed a bunch of bugs and added a chance system">
+      <created>1583880251402</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583880251402</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Made passengers invisible">
+      <created>1583880364413</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1583880364413</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -480,7 +460,7 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23624596" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24029127" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -489,7 +469,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919093" visible="true" weight="0.32949308" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919093" weight="0.32949308" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39976957" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -501,7 +481,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.32928804" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32928804" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -514,7 +494,9 @@
     <MESSAGE value="Added a config.yml" />
     <MESSAGE value="Fixed some more potential bugs" />
     <MESSAGE value="Modified plugin.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified plugin.yml" />
+    <MESSAGE value="Fixed a bunch of bugs and added a chance system" />
+    <MESSAGE value="Made passengers invisible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made passengers invisible" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/base/VillagerSpawner.java" />
@@ -576,16 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityAttack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="47" column="73" selection-start-line="45" selection-start-column="22" selection-end-line="47" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/SpawnCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -596,13 +568,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDeath.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/base/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        <state relative-caret-position="187">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/tasks/StructureFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -618,8 +607,8 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2420" column="20" selection-start-line="2420" selection-start-column="20" selection-end-line="2420" selection-end-column="20" />
+        <state relative-caret-position="528">
+          <caret line="2866" column="18" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
           <folding>
             <element signature="e#94598#94599#0" expanded="true" />
             <element signature="e#94636#94637#0" expanded="true" />
@@ -629,65 +618,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/base/CustomMobSpawner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+        <state relative-caret-position="497">
+          <caret line="41" column="56" lean-forward="true" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/base/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/tasks/StructureFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1494#1495#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#1754#1755#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/commands/EditCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="76" column="85" selection-start-line="76" selection-start-column="85" selection-end-line="76" selection-end-column="85" />
+        <state relative-caret-position="1367">
+          <caret line="93" column="55" lean-forward="true" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/Villagers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="446">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDismount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        <state relative-caret-position="527">
+          <caret line="33" column="88" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityDeath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/EntityAttack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -696,21 +678,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/listeners/CustomVillagerSpawner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="86" column="49" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+        <state relative-caret-position="1078">
+          <caret line="82" column="35" lean-forward="true" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3377#3378#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/espada/villagers/Villagers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3293#3294#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
           </folding>
         </state>
       </provider>
